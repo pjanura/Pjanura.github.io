@@ -52,16 +52,16 @@ body {
 
 /* Position each image individually */
 #image1 {
-    top: 50%;
-    left: 20%;
+    top: 30%;
+    left: 25%;
 }
 
 #image2 {
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 55%;
 }
 
 #image3 {
-    top: 50%;
-    left: 80%;
+    top: 30%;
+    left: 85%;
 }
