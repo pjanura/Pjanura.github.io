@@ -30,3 +30,17 @@ body {
     height: 100%;
     object-fit: cover;
 }
+
+.overlay-image {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Ensures the clickable image is on top */
+}
+
+.overlay-image img {
+    width: 100px; /* Set the size of the clickable image */
+    height: auto;
+    cursor: pointer; /* Changes the cursor to a pointer when hovering */
+}
