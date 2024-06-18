@@ -38,7 +38,7 @@ body {
 }
 
 .overlay-image img {
-    width: 20vw; /* Size relative to viewport width */
+    width: 10vw; /* Size relative to viewport width */
     height: auto;
     cursor: pointer; /* Changes the cursor to a pointer when hovering */
     transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
