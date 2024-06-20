@@ -1,9 +1,10 @@
 body {
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    align-items: flex-start; /* Align items at the start to allow scrolling */
+    height: 100%;
 }
 
 .container {
@@ -11,6 +12,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 60%;
+    margin-top: 20px; /* Add some margin to the top for better spacing */
 }
 
 .container img {
