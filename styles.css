@@ -30,7 +30,7 @@ body, html {
 
 .row a {
     margin: 10px;
-    flex: 1 1 calc(33.33% - 20px); /* Three images per row with space between */
+    flex: 1 1 calc(33.33% - 20px); /* Default three images per row with space between */
     max-width: calc(33.33% - 20px);
     box-sizing: border-box;
 }
@@ -65,11 +65,11 @@ body, html {
 
 @media screen and (min-width: 1024px) {
     .row:first-child a {
-        flex: 1 1 calc(50% - 20px); /* Two images per row in the first row */
-        max-width: calc(50% - 20px);
+        flex: 1 1 calc(40% - 20px); /* Slightly smaller two images per row in the first row */
+        max-width: calc(40% - 20px);
     }
     .row:last-child a {
-        flex: 1 1 calc(33.33% - 20px); /* Three images per row in the second row */
-        max-width: calc(33.33% - 20px);
+        flex: 1 1 calc(30% - 20px); /* Slightly larger three images per row in the second row */
+        max-width: calc(30% - 20px);
     }
 }
