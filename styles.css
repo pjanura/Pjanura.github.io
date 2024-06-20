@@ -17,22 +17,36 @@ body, html {
 
 .row {
     display: flex;
+    justify-content: center;
     margin: 10px 0;
+    flex-wrap: wrap;
 }
 
 .row a {
-    margin: 0 10px;
+    margin: 10px;
 }
 
 .row img {
     max-width: 100%;
     height: auto;
     display: block;
-    border: 2px solid #fff; /* Optional: add some styling to the images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow for better visibility */
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
 }
 
 .row img:hover {
     transform: scale(1.05);
+}
+
+@media screen and (min-width: 768px) {
+    .row img {
+        width: calc(50% - 20px); /* Adjust this to fit nicely on an iPad screen */
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .row img {
+        width: calc(33.33% - 20px); /* Adjust this to fit nicely on larger screens */
+    }
 }
