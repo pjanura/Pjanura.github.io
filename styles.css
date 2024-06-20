@@ -15,70 +15,38 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
 }
 
 .row {
     display: flex;
     justify-content: center;
-    width: 100%;
-}
-
-.row:first-child {
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 .row a {
-    margin: 10px;
-    box-sizing: border-box;
+    margin: 0 10px;
 }
 
 .row img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
     border: 2px solid #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, filter 0.3s;
+    transition: transform 0.3s;
 }
 
-.row img:hover, .row img:active, .row img.flow {
+.row img:hover {
     transform: scale(1.05);
-    filter: brightness(1.2);
-    animation: flow 0.6s;
-}
-
-@keyframes flow {
-    0% { transform: scale(1); filter: brightness(1); }
-    50% { transform: scale(1.05); filter: brightness(1.2); }
-    100% { transform: scale(1); filter: brightness(1); }
 }
 
 @media screen and (min-width: 768px) {
-    .row:first-child a {
-        flex: 1 1 40%; /* Slightly smaller two images per row in the first row */
-        max-width: 40%;
+    .row:first-child {
+        width: 60%;
+        justify-content: space-around;
     }
-    .row:last-child a {
-        flex: 1 1 30%; /* Slightly larger three images per row in the second row */
-        max-width: 30%;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .row {
-        flex: 1;
-    }
-    .row a {
-        flex: 1;
-    }
-    .row:first-child a {
-        height: calc(50vh - 40px); /* Adjust height to fit within the viewport */
-    }
-    .row:last-child a {
-        height: calc(33.33vh - 40px); /* Adjust height to fit within the viewport */
+    .row:last-child {
+        width: 90%;
+        justify-content: space-around;
     }
 }
