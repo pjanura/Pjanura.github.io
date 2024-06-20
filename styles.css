@@ -17,51 +17,50 @@ body {
 }
 
 .image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-.image-container img {
+.image-container > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.overlay-image {
+.overlay-images {
     position: absolute;
-    transform: translate(-50%, -50%);
-    z-index: 10; /* Ensures the clickable images are on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10%;
+}
+
+.overlay-images .row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .overlay-image img {
-    width: 15vw; /* Size relative to viewport width */
+    width: 10vw; /* Size relative to viewport width */
     height: auto;
-    cursor: pointer; /* Changes the cursor to a pointer when hovering */
-    transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
 
-/* Glow effect on hover */
 .overlay-image img:hover,
 .overlay-image img.active {
     box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.8); /* Yellow glow */
 }
 
-/* Position each image individually */
-#image1 {
-    top: 15%;
-    left: 25%;
-}
-
-#image2 {
-    top: 30%;
-    left: 55%;
-}
-
-#image3 {
-    top: 30%;
-    left: 85%;
+/* Individual styling for specific images can be added if needed */
+#image2 img {
+    width: 15vw; /* Example specific size */
 }
