@@ -35,28 +35,48 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Gap between rows */
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Gap between images in the same row */
+.overlay-image {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
 }
 
 .overlay-image img {
-    width: 15vw; /* Size relative to viewport width */
+    width: 15vw; /* Default size for all images */
     height: auto;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
 }
 
 /* Glow effect on hover */
 .overlay-image img:hover,
 .overlay-image img.active {
     box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.8); /* Yellow glow */
+}
+
+/* Positioning each image individually */
+#image1 {
+    top: 20%;
+    left: 25%;
+}
+
+#image2 {
+    top: 20%;
+    left: 75%;
+}
+
+#image3 {
+    top: 60%;
+    left: 20%;
+}
+
+#image4 {
+    top: 60%;
+    left: 50%;
+}
+
+#image5 {
+    top: 60%;
+    left: 80%;
 }
