@@ -1,25 +1,13 @@
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align items at the start to allow scrolling */
-    height: 100%;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 60%;
-    margin-top: 20px; /* Add some margin to the top for better spacing */
-}
-
-.container img {
+/* Ensure the image container takes the full width of the viewport */
+.image-container {
     width: 100%;
-    height: auto;
+    overflow: hidden; /* Ensures no overflow issues */
+    text-align: center; /* Centers the image horizontally */
 }
 
-.container .wide {
-    grid-column: span 3;
+/* Make the image responsive */
+.image-container img {
+    width: 100%; /* The image will scale with the width of the container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    max-width: 100%; /* Prevents the image from becoming larger than its original size */
 }
