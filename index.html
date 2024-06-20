@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Grid</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 60%;
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+        }
+        .container .wide {
+            grid-column: span 3;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <a href="https://example.com/blum" target="_blank">
-                <img src="Blum.png" alt="Blum">
-            </a>
-            <a href="https://example.com/dahlmann" target="_blank">
-                <img src="Dahlmann.png" alt="Dahlmann">
-            </a>
-        </div>
-        <div class="row">
-            <a href="https://example.com/friedrich-wilhelm" target="_blank">
-                <img src="Friedrich Wilhelm.png" alt="Friedrich Wilhelm">
-            </a>
-            <a href="https://example.com/gagern" target="_blank">
-                <img src="Gagern.png" alt="Gagern">
-            </a>
-            <a href="https://example.com/radowitz" target="_blank">
-                <img src="Radowitz.png" alt="Radowitz">
-            </a>
-        </div>
+        <img src="Blum.png" alt="Blum">
+        <img src="Dahlmann.png" alt="Dahlmann">
+        <img src="Friedrich Wilhelm.png" alt="Friedrich Wilhelm">
+        <img src="Gagern.png" alt="Gagern">
+        <img src="Radowitz.png" alt="Radowitz" class="wide">
     </div>
 </body>
 </html>
