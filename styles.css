@@ -17,20 +17,26 @@ body, html {
     justify-content: center;
     padding: 20px; /* Add padding to ensure the top row is not cut off */
     box-sizing: border-box;
+    width: 100%;
 }
 
 .row {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 10px 0;
+    width: 100%;
 }
 
 .row a {
-    margin: 0 10px;
+    margin: 10px;
+    flex: 1 1 calc(33.33% - 20px); /* Three images per row with space between */
+    max-width: calc(33.33% - 20px);
+    box-sizing: border-box;
 }
 
 .row img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: block;
     border: 2px solid #fff;
@@ -51,12 +57,19 @@ body, html {
 }
 
 @media screen and (min-width: 768px) {
-    .row:first-child {
-        width: 60%;
-        justify-content: space-around;
+    .row a {
+        flex: 1 1 calc(50% - 20px); /* Two images per row on medium screens */
+        max-width: calc(50% - 20px);
     }
-    .row:last-child {
-        width: 90%;
-        justify-content: space-around;
+}
+
+@media screen and (min-width: 1024px) {
+    .row:first-child a {
+        flex: 1 1 calc(50% - 20px); /* Two images per row in the first row */
+        max-width: calc(50% - 20px);
+    }
+    .row:last-child a {
+        flex: 1 1 calc(33.33% - 20px); /* Three images per row in the second row */
+        max-width: calc(33.33% - 20px);
     }
 }
