@@ -1,32 +1,19 @@
-/* Ensure the image container takes the full width of the viewport */
-.image-container {
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three equal-width columns */
-    gap: 10px; /* Space between the images */
-    justify-items: center; /* Center the images in their grid cells */
-    align-items: center; /* Center the images in their grid cells */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.container img {
     width: 100%;
-    max-width: 1200px; /* Optional: to limit the max width of the container */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Optional: for some padding around the container */
-}
-
-/* Adjust the grid layout for smaller screens */
-@media (max-width: 768px) {
-    .image-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .image-container {
-        grid-template-columns: 1fr; /* One column on very small screens */
-    }
-}
-
-/* Make the images responsive */
-.image-container img {
-    width: 100%; /* The image will scale with the width of the container */
-    height: auto; /* Maintains the aspect ratio of the image */
-    max-width: 100%; /* Prevents the image from becoming larger than its original size */
+    height: auto;
 }
