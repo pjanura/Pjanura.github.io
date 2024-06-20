@@ -3,8 +3,11 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    background: url('hintergrund2.jpeg') no-repeat center center fixed;
+    background: url('Hintergrund2.jpeg') no-repeat center center fixed;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
@@ -12,18 +15,16 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
 .row {
     display: flex;
     justify-content: center;
     margin: 10px 0;
-    flex-wrap: wrap;
 }
 
 .row a {
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .row img {
@@ -40,13 +41,12 @@ body, html {
 }
 
 @media screen and (min-width: 768px) {
-    .row img {
-        width: calc(50% - 20px); /* Adjust this to fit nicely on an iPad screen */
+    .row:first-child {
+        width: 60%;
+        justify-content: space-around;
     }
-}
-
-@media screen and (min-width: 1024px) {
-    .row img {
-        width: calc(33.33% - 20px); /* Adjust this to fit nicely on larger screens */
+    .row:last-child {
+        width: 90%;
+        justify-content: space-around;
     }
 }
