@@ -28,5 +28,16 @@
             </a>
         </div>
     </div>
+    <script>
+        // To handle click effect on iPad or other touch devices
+        document.querySelectorAll('.row img').forEach(img => {
+            img.addEventListener('touchstart', function() {
+                this.classList.add('flow');
+                setTimeout(() => {
+                    this.classList.remove('flow');
+                }, 600); // duration of the flow effect
+            });
+        });
+    </script>
 </body>
 </html>
