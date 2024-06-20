@@ -37,30 +37,26 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10%;
+    gap: 20px; /* Gap between rows */
 }
 
-.overlay-images .row {
+.row {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Gap between images in the same row */
 }
 
 .overlay-image img {
-    width: 10vw; /* Size relative to viewport width */
+    width: 15vw; /* Size relative to viewport width */
     height: auto;
     cursor: pointer;
     transition: box-shadow 0.3s ease;
 }
 
+/* Glow effect on hover */
 .overlay-image img:hover,
 .overlay-image img.active {
     box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.8); /* Yellow glow */
-}
-
-/* Individual styling for specific images can be added if needed */
-#image2 img {
-    width: 15vw; /* Example specific size */
 }
