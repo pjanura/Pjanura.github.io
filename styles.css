@@ -1,52 +1,23 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    background: url('Hintergrund2.jpeg') no-repeat center center fixed;
-    background-size: cover;
+body {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 60%;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-.row a {
-    margin: 0 10px;
-}
-
-.row img {
-    max-width: 100%;
+.container img {
+    width: 100%;
     height: auto;
-    display: block;
-    border: 2px solid #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
 }
 
-.row img:hover {
-    transform: scale(1.05);
-}
-
-@media screen and (min-width: 768px) {
-    .row:first-child {
-        width: 60%;
-        justify-content: space-around;
-    }
-    .row:last-child {
-        width: 90%;
-        justify-content: space-around;
-    }
+.container .wide {
+    grid-column: span 3;
 }
