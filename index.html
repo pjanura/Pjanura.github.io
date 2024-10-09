@@ -2,17 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Grid</title>
+    <title>Multiple Choice Quizzes with TOC</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <img src="Blum.png" alt="Blum">
-        <img src="Dahlmann.png" alt="Dahlmann">
-        <img src="Friedrich Wilhelm.png" alt="Friedrich Wilhelm">
-        <img src="Gagern.png" alt="Gagern">
-        <img src="Radowitz.png" alt="Radowitz">
+
+    <h1>Multiple Choice Quizzes with Table of Contents</h1>
+
+    <!-- Textbox on top of the first quiz -->
+    <div class="content-section">
+        <div class="textbox" id="textbox1">
+            <h2>Introduction</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ex eu nulla pretium, nec interdum quam sodales. Donec lacinia lorem sit amet justo facilisis, at bibendum libero pretium.
+            </p>
+            <p>
+                Aenean sit amet risus vel lacus congue vulputate non non ligula. Nullam euismod, augue non faucibus viverra, odio libero placerat risus, a interdum libero nunc non nisi.
+            </p>
+        </div>
+
+        <!-- TOC for Textbox 1 -->
+        <div class="toc">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#textbox1" class="toc-link">Introduction</a></li>
+                <li><a href="#textbox2" class="toc-link">Hobbes Biography</a></li>
+                <li><a href="#textbox3" class="toc-link">Conclusion</a></li>
+            </ul>
+        </div>
     </div>
+
+    <!-- Quiz 1 -->
+    <div class="quiz-box" id="quiz1-box">
+        <h2>Quiz 1</h2>
+        <div id="quiz1-container">
+            <!-- Quiz 1 questions will be dynamically inserted here -->
+        </div>
+
+        <div class="quiz-buttons">
+            <button id="quiz1-submit-btn" type="button" onclick="submitAnswer(1)">Submit</button>
+        </div>
+
+        <p id="quiz1-feedback"></p>
+        <p id="quiz1-remaining-questions"></p>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-section">
+        <!-- Textbox with the provided text -->
+        <div class="textbox" id="textbox2">
+            <h2>Hobbes Biography</h2>
+            <p>
+                Hobbes wurde 1588 als Sohn eines einfachen Landpfarrers in Malmesbury in der Grafschaft Wiltshire geboren...
+            </p>
+            <!-- Additional paragraphs as needed -->
+        </div>
+
+        <!-- TOC for Textbox 2 -->
+        <div class="toc">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#textbox1" class="toc-link">Introduction</a></li>
+                <li><a href="#textbox2" class="toc-link">Hobbes Biography</a></li>
+                <li><a href="#textbox3" class="toc-link">Conclusion</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Quiz 2 -->
+    <div class="quiz-box" id="quiz2-box">
+        <h2>Quiz 2</h2>
+        <div id="quiz2-container">
+            <!-- Quiz 2 questions will be dynamically inserted here -->
+        </div>
+
+        <div class="quiz-buttons">
+            <button id="quiz2-submit-btn" type="button" onclick="submitAnswer(2)">Submit</button>
+        </div>
+
+        <p id="quiz2-feedback"></p>
+        <p id="quiz2-remaining-questions"></p>
+    </div>
+
+    <!-- Third Textbox under Quiz 2 -->
+    <div class="content-section">
+        <div class="textbox" id="textbox3">
+            <h2>Conclusion</h2>
+            <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+            </p>
+            <p>
+                Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </p>
+        </div>
+
+        <!-- TOC for Textbox 3 -->
+        <div class="toc">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#textbox1" class="toc-link">Introduction</a></li>
+                <li><a href="#textbox2" class="toc-link">Hobbes Biography</a></li>
+                <li><a href="#textbox3" class="toc-link">Conclusion</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Quiz 3 -->
+    <div class="quiz-box" id="quiz3-box">
+        <h2>Quiz 3</h2>
+        <div id="quiz3-container">
+            <!-- Quiz 3 questions will be dynamically inserted here -->
+        </div>
+
+        <div class="quiz-buttons">
+            <button id="quiz3-submit-btn" type="button" onclick="submitAnswer(3)">Submit</button>
+        </div>
+
+        <p id="quiz3-feedback"></p>
+        <p id="quiz3-remaining-questions"></p>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
